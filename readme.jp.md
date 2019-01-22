@@ -1,11 +1,16 @@
 # Login Infomation
 
-[English ver is hare][en]
+[English ver readme is hare][en]
 
 ログインしたプレイヤーに[raw JSON][rj]のメッセージを表示します。
 
 tellrawコマンドと**大体同じ**動作をします。
 一番上の配列では直前で指定した書式が後ろに受け継がれなかったりする違いがあります。
+
+## 特徴
+
+- raw JSON による装飾。
+- 1コマンドでリロード&テスト表示
 
 ## 設定
 
@@ -23,14 +28,10 @@ tellrawコマンドと**大体同じ**動作をします。
 
 ### logininfo <reload | show | test>
 
-最初の`logininfo`は
+別名
 
-```shell
-li
-logininfomation
-```
-
-で代用できます。
+- li
+- logininfomation
 
 #### logininfo reload
 

@@ -4,6 +4,11 @@
 
 The plugin shows [raw JSON][rj] message to that player when the player joins.
 
+## Feature
+
+- Decoration by raw JSON. (almost the same to /tellraw command)
+- Reload and display test completed with one command
+
 ## Setting
 
 Write raw JSON in `plugins/LoginInfomation/logininfo.json`.
@@ -18,7 +23,10 @@ That file encode is UTF-8.
 
 ### logininfo <reload | show | test>
 
-Or `li` or `logininfomation`.
+aliases:
+
+- li
+- logininfomation
 
 #### logininfo reload
 
@@ -28,13 +36,13 @@ Reload seggingfile(s).
 
 In game only.
 
-Show the infomation.
+Show the message.
 
 #### logininfo test
 
 In game only.
 
-Reload seggingfile(s) and show the infomation.
+Reload seggingfile(s) and show the message.
 
 
 <!-- links -->
