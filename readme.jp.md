@@ -28,6 +28,7 @@ tellrawコマンドと**大体同じ**動作をします。
 
 ### logininfo <reload | show | test>
 
+opのパーミッションが必要です。
 別名
 
 - li

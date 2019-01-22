@@ -2,7 +2,7 @@
 
 [日本語はこちら][jp]
 
-The plugin shows [raw JSON][rj] message to that player when the player joins.
+The plugin shows [raw JSON][rj] message to the player when that player joins.
 
 ## Feature
 
@@ -14,7 +14,7 @@ The plugin shows [raw JSON][rj] message to that player when the player joins.
 Write raw JSON in `plugins/LoginInfomation/logininfo.json`.
 That file encode is UTF-8.
 
-**These key do not works properly.**
+**These keys do not work properly**
 
 - `selector`
 - `score`
@@ -23,6 +23,7 @@ That file encode is UTF-8.
 
 ### logininfo <reload | show | test>
 
+Needs op permission.
 aliases:
 
 - li
@@ -30,20 +31,19 @@ aliases:
 
 #### logininfo reload
 
-Reload seggingfile(s).
+Reload seggingfile.
 
 #### logininfo show
 
-In game only.
+Chat command only.
 
 Show the message.
 
 #### logininfo test
 
-In game only.
+Chat command only.
 
-Reload seggingfile(s) and show the message.
-
+Reload seggingfile and show the message.
 
 <!-- links -->
 [en]:readme.md
