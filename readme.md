@@ -16,21 +16,21 @@ That file encode is UTF-8.
 
 ## Commands
 
-### longininfo <reload | show | test>
+### logininfo <reload | show | test>
 
 Or `li` or `logininfomation`.
 
-#### longininfo reload
+#### logininfo reload
 
 Reload seggingfile(s).
 
-#### longininfo show
+#### logininfo show
 
 In game only.
 
 Show the infomation.
 
-#### longininfo test
+#### logininfo test
 
 In game only.
 

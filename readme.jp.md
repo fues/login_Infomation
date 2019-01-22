@@ -21,28 +21,28 @@ tellrawコマンドと**大体同じ**動作をします。
 
 ## コマンド
 
-### longininfo <reload | show | test>
+### logininfo <reload | show | test>
 
-最初の`longininfo`は
+最初の`logininfo`は
 
 ```shell
 li
-longininfomation
+logininfomation
 ```
 
 で代用できます。
 
-#### longininfo reload
+#### logininfo reload
 
 設定ファイルを再読込みします。
 
-#### longininfo show
+#### logininfo show
 
 ゲーム内チャットコマンドのみ。
 
 今読み込んでるログインメッセージを表示します。
 
-#### longininfo test
+#### logininfo test
 
 ゲーム内チャットコマンドのみ。
 
