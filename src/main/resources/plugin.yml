@@ -1,0 +1,21 @@
+name: LoginInfomation
+#名前にスペース入れるとロードされないぞ
+version: 0.1
+description: Shows rawJSON when it login.
+author: fues
+website: forum.minecraftuser.jp
+#---
+main: fues_ele.spigot.login_infomation.Init
+
+commands:
+    logininfo:
+        aliases:
+            - li
+            - logininfomation
+        description: Login Infomation command.
+        usage: "Usage: /li <reload | show | test>"
+        permission: logininfo
+Permissions:
+    logininfo:
+        description: All commands of logininfo
+        default: op
