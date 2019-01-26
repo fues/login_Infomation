@@ -6,11 +6,13 @@
 package fues_ele.spigot.login_infomation.config;
 
 import com.google.common.io.ByteStreams;
-import file_reader.FastFileReader;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -38,7 +40,11 @@ public class JSON {
     public void load() {
         try {
             this.make();
-            jsonText = FastFileReader.readAll(filePath);
+            try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file),"UTF-8"))) {
+                this.jsonText="";
+                for(int buf;(buf=bufferedReader.read())!=-1;jsonText+=(char)buf);
+                this.plugin.getLogger().info(jsonText);
+            }
         } catch (IOException e) {
             plugin.getLogger().warning(e.getLocalizedMessage());
         }
