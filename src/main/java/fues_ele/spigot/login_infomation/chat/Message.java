@@ -24,7 +24,7 @@ public class Message {
     }
 
     public void make(String jsonText) {
-        msg = ComponentSerializer.parse(jsonText);
+        this.msg = ComponentSerializer.parse(jsonText);
     }
 
     public void send(Player.Spigot player) {

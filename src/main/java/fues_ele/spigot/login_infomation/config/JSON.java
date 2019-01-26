@@ -23,20 +23,18 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class JSON {
 
     private final JavaPlugin plugin;
-    private String filename;
     private final File dir;
     private File file;
-    private final String filePath;
     private String jsonText;
 
     public JSON(JavaPlugin plugin, String filename) {
         this.plugin = plugin;
-        this.filename = filename;
         this.dir = plugin.getDataFolder();
-        this.file = new File(dir, filename);
-        this.filePath = file.getPath();
+        this.setFile(filename);
     }
-
+    public void setFile(String filename){
+        this.file = new File(dir, filename);
+    }
     public void load() {
         try {
             this.make();
@@ -46,21 +44,21 @@ public class JSON {
                 this.plugin.getLogger().info(jsonText);
             }
         } catch (IOException e) {
-            plugin.getLogger().warning(e.getLocalizedMessage());
+            this.plugin.getLogger().warning(e.getLocalizedMessage());
         }
     }
 
     public void make() throws IOException {
-        if (!dir.exists()) {
-            dir.mkdir();
+        if (!this.dir.exists()) {
+            this.dir.mkdir();
         }
-        if (!file.exists()) {
-            plugin.getLogger().info("genarating file...");
-            file.createNewFile();
+        if (!this.file.exists()) {
+            this.plugin.getLogger().info("genarating file...");
+            this.file.createNewFile();
             //copy default file
             try (
-                    OutputStream outputStream = new FileOutputStream(file);
-                    InputStream inputStream = plugin.getResource("logininfo.json");) {
+                    OutputStream outputStream = new FileOutputStream(this.file);
+                    InputStream inputStream = this.plugin.getResource("logininfo.json");) {
                 ByteStreams.copy(inputStream, outputStream);
             }
         }

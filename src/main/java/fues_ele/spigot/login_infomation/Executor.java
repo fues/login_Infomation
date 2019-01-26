@@ -28,23 +28,23 @@ public class Executor {
     }
 
     public void loadFile() {
-        jsonFile.load();
-        message.make(jsonFile.getJSONText());
-        plugin.getLogger().info("load finish!");
+        this.jsonFile.load();
+        this.message.make(jsonFile.getJSONText());
+        this.plugin.getLogger().info("load finish!");
     }
 
     public void sendMssage(CommandSender sender) {
 //        plugin.getLogger().info(sender.getClass().toString());
         if (sender instanceof Player) {
-            message.send((Player.Spigot) sender.spigot());
-            plugin.getLogger().info("msg sent!");
+            this.message.send((Player.Spigot) sender.spigot());
+            this.plugin.getLogger().info("msg sent!");
         } else {
-            plugin.getLogger().info("this command must be call by player");
+            this.plugin.getLogger().info("this command must be call by player");
         }
     }
 
     public void sendMssage(Player player) {
-        message.send(player.spigot());
-        plugin.getLogger().info("msg sent!");
+        this.message.send(player.spigot());
+        this.plugin.getLogger().info("msg sent!");
     }
 }
