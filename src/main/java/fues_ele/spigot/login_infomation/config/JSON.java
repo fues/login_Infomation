@@ -41,7 +41,7 @@ public class JSON {
             try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(file),"UTF-8"))) {
                 this.jsonText="";
                 for(int buf;(buf=bufferedReader.read())!=-1;jsonText+=(char)buf);
-                this.plugin.getLogger().info(jsonText);
+//                this.plugin.getLogger().info(jsonText);
             }
         } catch (IOException e) {
             this.plugin.getLogger().warning(e.getLocalizedMessage());
