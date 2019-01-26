@@ -6,21 +6,23 @@
 package fues_ele.spigot.login_infomation.commands;
 
 import fues_ele.spigot.login_infomation.Executor;
+import java.util.ArrayList;
+import java.util.List;
 import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabExecutor;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  *
  * @author fues
  */
-public class CommandExecute implements CommandExecutor {
+public class TabExecute implements TabExecutor {
 
     private final JavaPlugin plugin;
     private final Executor exe;
 
-    public CommandExecute(JavaPlugin plugin, Executor exe) {
+    public TabExecute(JavaPlugin plugin, Executor exe) {
         this.plugin = plugin;
         this.exe = exe;
     }
@@ -59,5 +61,22 @@ public class CommandExecute implements CommandExecutor {
     private void showResult(CommandSender sender, String msg) {
         String name = plugin.getName();
         sender.sendMessage("[" + name + "] " + msg);
+    }
+    
+    @Override
+    public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
+        List<String> list = new ArrayList<>();
+        int argc = args.length;
+        switch (argc) {
+        case 1:
+            for (int i = 0; i < CommandsList.ARG1.length; i++) {
+                if (CommandsList.ARG1[i].startsWith(args[0])) {
+                    list.add(CommandsList.ARG1[i]);
+                }
+            }
+            break;
+        default:
+        }
+        return list;
     }
 }
