@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.fues_ele.spigot</groupId>
     <artifactId>login_infomation</artifactId>
-    <version>1.0_by1.12.2</version>
+    <version>1.0.1_by1.13.2</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
